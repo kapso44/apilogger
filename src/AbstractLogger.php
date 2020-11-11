@@ -94,7 +94,7 @@ abstract class AbstractLogger{
      */
     public function mapArrayToModel(array $data){
         $model = new ApiLog();
-        $model->created_at = Carbon::make($data[0]);
+        $model->created_at = Carbon::parse($data[0]);
         $model->method = $data[1];
         $model->url = $data[2];
         $model->payload = $data[3];
